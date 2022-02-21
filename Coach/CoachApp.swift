@@ -11,7 +11,8 @@ import SwiftUI
 struct CoachApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            SessionView(session: Profile.sampleData[0].sessions[0])
         }
     }
 }

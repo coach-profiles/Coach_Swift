@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76B146927C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */; };
 		F78A35CB27BF64410004ADE4 /* CoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35CA27BF64410004ADE4 /* CoachApp.swift */; };
 		F78A35CD27BF64410004ADE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35CC27BF64410004ADE4 /* ContentView.swift */; };
 		F78A35CF27BF64420004ADE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78A35CE27BF64420004ADE4 /* Assets.xcassets */; };
 		F78A35D227BF64420004ADE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78A35D127BF64420004ADE4 /* Preview Assets.xcassets */; };
+		F78A35DA27BF64600004ADE4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35D927BF64600004ADE4 /* Profile.swift */; };
+		F78A35DD27BF6AA00004ADE4 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35DC27BF6AA00004ADE4 /* SessionView.swift */; };
+		F78A35DF27BF6B320004ADE4 /* SessionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35DE27BF6B320004ADE4 /* SessionHeaderView.swift */; };
+		F78A35E127BF6B900004ADE4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35E027BF6B900004ADE4 /* Theme.swift */; };
+		F7988A1527BF743A00E10648 /* SessionProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7988A1427BF743A00E10648 /* SessionProgressViewStyle.swift */; };
+		F7988A1727BF77BD00E10648 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7988A1627BF77BD00E10648 /* TrailingIconLabelStyle.swift */; };
+		F7988A1927BF7CC000E10648 /* SessionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7988A1827BF7CC000E10648 /* SessionFooterView.swift */; };
+		F7988A1B27BF8A1000E10648 /* ActivityTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7988A1A27BF8A1000E10648 /* ActivityTimer.swift */; };
+		F7988A1D27BF8E7B00E10648 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7988A1C27BF8E7B00E10648 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpeechSynthesizer.swift; sourceTree = "<group>"; };
 		F78A35C727BF64410004ADE4 /* Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78A35CA27BF64410004ADE4 /* CoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachApp.swift; sourceTree = "<group>"; };
 		F78A35CC27BF64410004ADE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F78A35CE27BF64420004ADE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F78A35D127BF64420004ADE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F78A35D927BF64600004ADE4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F78A35DC27BF6AA00004ADE4 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		F78A35DE27BF6B320004ADE4 /* SessionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHeaderView.swift; sourceTree = "<group>"; };
+		F78A35E027BF6B900004ADE4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F7988A1427BF743A00E10648 /* SessionProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgressViewStyle.swift; sourceTree = "<group>"; };
+		F7988A1627BF77BD00E10648 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		F7988A1827BF7CC000E10648 /* SessionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFooterView.swift; sourceTree = "<group>"; };
+		F7988A1A27BF8A1000E10648 /* ActivityTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimer.swift; sourceTree = "<group>"; };
+		F7988A1C27BF8E7B00E10648 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +71,11 @@
 		F78A35C927BF64410004ADE4 /* Coach */ = {
 			isa = PBXGroup;
 			children = (
+				F7988A1327BF73F900E10648 /* Styles */,
+				F78A35DB27BF6A270004ADE4 /* Views */,
 				F78A35CA27BF64410004ADE4 /* CoachApp.swift */,
 				F78A35CC27BF64410004ADE4 /* ContentView.swift */,
+				F78A35D827BF644D0004ADE4 /* Models */,
 				F78A35CE27BF64420004ADE4 /* Assets.xcassets */,
 				F78A35D027BF64420004ADE4 /* Preview Content */,
 			);
@@ -65,6 +88,37 @@
 				F78A35D127BF64420004ADE4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F78A35D827BF644D0004ADE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F78A35D927BF64600004ADE4 /* Profile.swift */,
+				F7988A1A27BF8A1000E10648 /* ActivityTimer.swift */,
+				F7988A1C27BF8E7B00E10648 /* Session.swift */,
+				F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F78A35DB27BF6A270004ADE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F78A35DC27BF6AA00004ADE4 /* SessionView.swift */,
+				F78A35DE27BF6B320004ADE4 /* SessionHeaderView.swift */,
+				F7988A1827BF7CC000E10648 /* SessionFooterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7988A1327BF73F900E10648 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				F78A35E027BF6B900004ADE4 /* Theme.swift */,
+				F7988A1427BF743A00E10648 /* SessionProgressViewStyle.swift */,
+				F7988A1627BF77BD00E10648 /* TrailingIconLabelStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7988A1B27BF8A1000E10648 /* ActivityTimer.swift in Sources */,
 				F78A35CD27BF64410004ADE4 /* ContentView.swift in Sources */,
+				F7988A1927BF7CC000E10648 /* SessionFooterView.swift in Sources */,
+				F76B146927C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift in Sources */,
+				F78A35DF27BF6B320004ADE4 /* SessionHeaderView.swift in Sources */,
+				F7988A1527BF743A00E10648 /* SessionProgressViewStyle.swift in Sources */,
+				F7988A1727BF77BD00E10648 /* TrailingIconLabelStyle.swift in Sources */,
+				F78A35DA27BF64600004ADE4 /* Profile.swift in Sources */,
+				F7988A1D27BF8E7B00E10648 /* Session.swift in Sources */,
+				F78A35E127BF6B900004ADE4 /* Theme.swift in Sources */,
 				F78A35CB27BF64410004ADE4 /* CoachApp.swift in Sources */,
+				F78A35DD27BF6AA00004ADE4 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,12 +340,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudharkj.swift.Coach;
+				MARKETING_VERSION = 0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudharkj.swift.coach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -304,12 +369,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudharkj.swift.Coach;
+				MARKETING_VERSION = 0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudharkj.swift.coach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
