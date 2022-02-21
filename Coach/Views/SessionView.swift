@@ -36,6 +36,10 @@ struct SessionView: View {
             }
             activityTimer.startSession()
         }
+        .onDisappear {
+            activityTimer.stopSession()
+        }
+        .navigationTitle(session.name)
     }
 }
 

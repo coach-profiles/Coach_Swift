@@ -28,6 +28,7 @@
 /* Begin PBXFileReference section */
 		F730F3CA27C3770E00507E71 /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
 		F730F3CC27C3786A00507E71 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
+		F730F3CE27C403EE00507E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpeechSynthesizer.swift; sourceTree = "<group>"; };
 		F78A35C727BF64410004ADE4 /* Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78A35CA27BF64410004ADE4 /* CoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachApp.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		F78A35C927BF64410004ADE4 /* Coach */ = {
 			isa = PBXGroup;
 			children = (
+				F730F3CE27C403EE00507E71 /* Info.plist */,
 				F7988A1327BF73F900E10648 /* Styles */,
 				F78A35DB27BF6A270004ADE4 /* Views */,
 				F78A35CA27BF64410004ADE4 /* CoachApp.swift */,
@@ -343,6 +345,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Coach/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -372,6 +375,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Coach/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

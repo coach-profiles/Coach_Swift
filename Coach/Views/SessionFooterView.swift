@@ -13,27 +13,23 @@ struct SessionFooterView: View {
     let rewindAction: ()->Void
     let forwardAction: ()->Void
     
-    private var intervalNumber: Int? {
-        guard activityIndex >= 0 else { return nil }
+    private var intervalNumber: Int {
+        guard totalActivities > 0 else { return 0 }
+        guard activityIndex >= 0 else { return 1 }
+        guard activityIndex < totalActivities else { return totalActivities }
         return activityIndex + 1
     }
     private var intervalText: String {
-        guard let intervalNumber = intervalNumber else {
+        guard totalActivities > 0 else {
             return "No activities available!"
         }
         return "\(intervalNumber) of \(totalActivities)"
     }
     private var isFirstInterval: Bool {
-        guard let intervalNumber = intervalNumber else {
-            return true
-        }
-        return intervalNumber == 1
+        return activityIndex <= 0
     }
     private var isLastInterval: Bool {
-        guard let intervalNumber = intervalNumber else {
-            return true
-        }
-        return intervalNumber == totalActivities
+        return activityIndex + 1 >= totalActivities
     }
     
     var body: some View {

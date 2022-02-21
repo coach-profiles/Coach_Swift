@@ -26,7 +26,6 @@ class ActivityTimer: ObservableObject {
     @Published var lengthInSeconds: Int = 0
     
     private var timer: Timer?
-    private var timerStopped = false
     private var frequency: TimeInterval { 1.0 }
     private var startDate: Date?
     
@@ -62,7 +61,7 @@ class ActivityTimer: ObservableObject {
      */
     func stopSession() {
         /// Stop any timed interval.
-        changeToInterval(at: -1)
+        changeToInterval(at: intervals.count)
     }
     
     /**
@@ -83,12 +82,10 @@ class ActivityTimer: ObservableObject {
         /// Stop timer
         timer?.invalidate()
         timer = nil
-        timerStopped = true
         startDate = nil
         
         /// Initialize timer-dependent and published variables.
         secondsElapsed = 0
-        timerStopped = true
         intervalIndex = index
         if 0 <= index && index < intervals.count {
             intervalName = intervals[intervalIndex].name
@@ -102,10 +99,9 @@ class ActivityTimer: ObservableObject {
         let announcement = intervalName
         intervalChangedAction?(announcement)
         
-        guard index < intervals.count && intervals[intervalIndex].totalSeconds > 0 else { return }
+        guard intervalIndex >= 0, intervalIndex < intervals.count, intervals[intervalIndex].totalSeconds > 0 else { return }
         
         /// Initialize the timer variables.
-        timerStopped = false
         startDate = Date()
         timer = Timer.scheduledTimer(withTimeInterval: frequency, repeats: true) { [weak self] timer in
             if let self = self, let startDate = self.startDate {

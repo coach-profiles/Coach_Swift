@@ -19,9 +19,10 @@ struct SessionHeaderView: View {
         totalSeconds - secondsElapsed
     }
     private var progress: Double {
-        guard totalActivities > 0 else { return 1 }
+        guard activityIndex >= 0 else { return 0}
+        guard totalActivities > 0, activityIndex < totalActivities else { return 1 }
         guard totalSeconds > 0 else { return Double(activityIndex) / Double(totalActivities) }
-        return Double(activityIndex) * Double(totalSeconds + secondsElapsed) / (Double(totalActivities) * Double(totalSeconds))
+        return min(1.0, Double(activityIndex) * Double(totalSeconds + secondsElapsed) / (Double(totalActivities) * Double(totalSeconds)))
     }
     
     private var timeElapsed: String {
