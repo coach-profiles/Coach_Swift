@@ -141,3 +141,19 @@ extension Array where Element == Session.Activity {
         }
     }
 }
+
+extension ActivityTimer {
+    static func seconds2Text(time: Int) -> String {
+        var seconds = time
+        let minutes = seconds / 60
+        seconds = seconds % 60
+        
+        return String("\(minutes.withPadding()):\(seconds.withPadding())")
+    }
+}
+
+extension Int {
+    func withPadding() -> String {
+        return String(format: "%02d", self)
+    }
+}

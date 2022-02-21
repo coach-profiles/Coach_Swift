@@ -26,19 +26,11 @@ struct SessionHeaderView: View {
     }
     
     private var timeElapsed: String {
-        seconds2Text(time: secondsElapsed)
+        ActivityTimer.seconds2Text(time: secondsElapsed)
     }
     
     private var timeRemaining: String {
-        seconds2Text(time: secondsRemaining)
-    }
-    
-    private func seconds2Text(time: Int) -> String {
-        var seconds = time
-        let minutes = seconds / 60
-        seconds = seconds % 60
-        
-        return String("\(minutes.withPadding()):\(seconds.withPadding())")
+        ActivityTimer.seconds2Text(time: secondsRemaining)
     }
     
     var body: some View {
@@ -70,12 +62,6 @@ struct SessionHeaderView: View {
             .accessibilityValue("\(secondsRemaining)")
         }
         .padding([.top, .horizontal])
-    }
-}
-
-extension Int {
-    func withPadding() -> String {
-        return String(format: "%02d", self)
     }
 }
 

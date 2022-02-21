@@ -14,7 +14,7 @@ struct SessionsView: View {
     var body: some View {
         List {
             ForEach(sessions) { session in
-                NavigationLink(destination: SessionView(session: session)) {
+                NavigationLink(destination: DetailSessionView(session: session)) {
                     Text(session.name)
                         .font(.headline)
                         .accessibilityAddTraits(.isHeader)

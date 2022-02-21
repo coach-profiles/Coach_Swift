@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F730F3CB27C3770E00507E71 /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CA27C3770E00507E71 /* ProfilesView.swift */; };
 		F730F3CD27C3786A00507E71 /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CC27C3786A00507E71 /* SessionsView.swift */; };
+		F730F3D027C42B9A00507E71 /* DetailSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CF27C42B9A00507E71 /* DetailSessionView.swift */; };
 		F76B146927C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */; };
 		F78A35CB27BF64410004ADE4 /* CoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35CA27BF64410004ADE4 /* CoachApp.swift */; };
 		F78A35CD27BF64410004ADE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35CC27BF64410004ADE4 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		F730F3CA27C3770E00507E71 /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
 		F730F3CC27C3786A00507E71 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
 		F730F3CE27C403EE00507E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F730F3CF27C42B9A00507E71 /* DetailSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSessionView.swift; sourceTree = "<group>"; };
 		F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpeechSynthesizer.swift; sourceTree = "<group>"; };
 		F78A35C727BF64410004ADE4 /* Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78A35CA27BF64410004ADE4 /* CoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachApp.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				F7988A1827BF7CC000E10648 /* SessionFooterView.swift */,
 				F730F3CA27C3770E00507E71 /* ProfilesView.swift */,
 				F730F3CC27C3786A00507E71 /* SessionsView.swift */,
+				F730F3CF27C42B9A00507E71 /* DetailSessionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				F7988A1D27BF8E7B00E10648 /* Session.swift in Sources */,
 				F78A35E127BF6B900004ADE4 /* Theme.swift in Sources */,
 				F78A35CB27BF64410004ADE4 /* CoachApp.swift in Sources */,
+				F730F3D027C42B9A00507E71 /* DetailSessionView.swift in Sources */,
 				F78A35DD27BF6AA00004ADE4 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
