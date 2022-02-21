@@ -12,7 +12,9 @@ struct CoachApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            SessionView(session: Profile.sampleData[0].sessions[0])
+            NavigationView {
+                ProfilesView(profiles: Profile.sampleData)
+            }
         }
     }
 }
