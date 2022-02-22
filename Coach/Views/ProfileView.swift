@@ -1,5 +1,5 @@
 //
-//  SessionsView.swift
+//  ProfileView.swift
 //  Coach
 //
 //  Created by Sudha Ravi Kumar Javvadi on 2/20/22.
@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct SessionsView: View {
-    var profileName: String
-    @Binding var sessions: [Session]
+struct ProfileView: View {
+    @Binding var profile: Profile
     @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewSessionView = false
     @State private var newSessionData = Session.Data()
@@ -17,7 +16,7 @@ struct SessionsView: View {
     
     var body: some View {
         List {
-            ForEach($sessions) { $session in
+            ForEach($profile.sessions) { $session in
                 NavigationLink(destination: SessionDetailView(session: $session)) {
                     Text(session.name)
                         .font(.headline)
@@ -26,7 +25,7 @@ struct SessionsView: View {
                 }
             }
         }
-        .navigationTitle(profileName)
+        .navigationTitle(profile.name)
         .toolbar {
             Button(action: {
                 isPresentingNewSessionView = true
@@ -47,7 +46,7 @@ struct SessionsView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Add") {
                                 let newSession = Session(data: newSessionData)
-                                sessions.append(newSession)
+                                profile.sessions.append(newSession)
                                 isPresentingNewSessionView = false
                                 newSessionData = Session.Data()
                             }
@@ -63,6 +62,6 @@ struct SessionsView: View {
 
 struct SessionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SessionsView(profileName: Profile.sampleData[0].name, sessions: .constant(Profile.sampleData[0].sessions), saveAction: {})
+        ProfileView(profile: .constant(Profile.sampleData[0]), saveAction: {})
     }
 }

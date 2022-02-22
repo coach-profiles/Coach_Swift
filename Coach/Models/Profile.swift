@@ -20,6 +20,26 @@ struct Profile: Identifiable {
 }
 
 extension Profile {
+    struct Data {
+        var name: String = ""
+    }
+    
+    var data: Data {
+        Data(name: name)
+    }
+    
+    mutating func update(from data: Data) {
+        name = data.name
+    }
+    
+    init(data: Data) {
+        id = UUID()
+        name = data.name
+        sessions = []
+    }
+}
+
+extension Profile {
     static let sampleData: [Profile] =
     [
         Profile(name: "Sample Profile",

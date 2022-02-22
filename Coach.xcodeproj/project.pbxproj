@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F730F3CB27C3770E00507E71 /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CA27C3770E00507E71 /* ProfilesView.swift */; };
-		F730F3CD27C3786A00507E71 /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CC27C3786A00507E71 /* SessionsView.swift */; };
+		F730F3CD27C3786A00507E71 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CC27C3786A00507E71 /* ProfileView.swift */; };
 		F730F3D027C42B9A00507E71 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730F3CF27C42B9A00507E71 /* SessionDetailView.swift */; };
 		F76B146927C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */; };
 		F78A35CB27BF64410004ADE4 /* CoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A35CA27BF64410004ADE4 /* CoachApp.swift */; };
@@ -27,11 +27,13 @@
 		F7EF885927C4771F007BB502 /* SessionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF885827C4771F007BB502 /* SessionEditView.swift */; };
 		F7EF885B27C47939007BB502 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF885A27C47939007BB502 /* ThemePickerView.swift */; };
 		F7EF885D27C479A6007BB502 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF885C27C479A6007BB502 /* ThemeView.swift */; };
+		F7EF885F27C4AA83007BB502 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF885E27C4AA83007BB502 /* ProfileStore.swift */; };
+		F7EF886327C4AF70007BB502 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF886227C4AF70007BB502 /* ProfileEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F730F3CA27C3770E00507E71 /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
-		F730F3CC27C3786A00507E71 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
+		F730F3CC27C3786A00507E71 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F730F3CE27C403EE00507E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F730F3CF27C42B9A00507E71 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
 		F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpeechSynthesizer.swift; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		F7EF885827C4771F007BB502 /* SessionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEditView.swift; sourceTree = "<group>"; };
 		F7EF885A27C47939007BB502 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
 		F7EF885C27C479A6007BB502 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		F7EF885E27C4AA83007BB502 /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
+		F7EF886227C4AF70007BB502 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				F7988A1A27BF8A1000E10648 /* ActivityTimer.swift */,
 				F7988A1C27BF8E7B00E10648 /* Session.swift */,
 				F76B146827C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift */,
+				F7EF885E27C4AA83007BB502 /* ProfileStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,7 +127,8 @@
 				F78A35DE27BF6B320004ADE4 /* SessionHeaderView.swift */,
 				F7988A1827BF7CC000E10648 /* SessionFooterView.swift */,
 				F730F3CA27C3770E00507E71 /* ProfilesView.swift */,
-				F730F3CC27C3786A00507E71 /* SessionsView.swift */,
+				F7EF886227C4AF70007BB502 /* ProfileEditView.swift */,
+				F730F3CC27C3786A00507E71 /* ProfileView.swift */,
 				F730F3CF27C42B9A00507E71 /* SessionDetailView.swift */,
 				F7EF885827C4771F007BB502 /* SessionEditView.swift */,
 				F7EF885A27C47939007BB502 /* ThemePickerView.swift */,
@@ -213,8 +219,10 @@
 			files = (
 				F7988A1B27BF8A1000E10648 /* ActivityTimer.swift in Sources */,
 				F78A35CD27BF64410004ADE4 /* ContentView.swift in Sources */,
+				F7EF886327C4AF70007BB502 /* ProfileEditView.swift in Sources */,
 				F7988A1927BF7CC000E10648 /* SessionFooterView.swift in Sources */,
 				F76B146927C2ECCB00D78FFF /* ActivitySpeechSynthesizer.swift in Sources */,
+				F7EF885F27C4AA83007BB502 /* ProfileStore.swift in Sources */,
 				F78A35DF27BF6B320004ADE4 /* SessionHeaderView.swift in Sources */,
 				F7EF885927C4771F007BB502 /* SessionEditView.swift in Sources */,
 				F730F3CB27C3770E00507E71 /* ProfilesView.swift in Sources */,
@@ -222,7 +230,7 @@
 				F7988A1727BF77BD00E10648 /* TrailingIconLabelStyle.swift in Sources */,
 				F7EF885B27C47939007BB502 /* ThemePickerView.swift in Sources */,
 				F78A35DA27BF64600004ADE4 /* Profile.swift in Sources */,
-				F730F3CD27C3786A00507E71 /* SessionsView.swift in Sources */,
+				F730F3CD27C3786A00507E71 /* ProfileView.swift in Sources */,
 				F7988A1D27BF8E7B00E10648 /* Session.swift in Sources */,
 				F78A35E127BF6B900004ADE4 /* Theme.swift in Sources */,
 				F78A35CB27BF64410004ADE4 /* CoachApp.swift in Sources */,

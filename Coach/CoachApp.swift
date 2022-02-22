@@ -13,7 +13,7 @@ struct CoachApp: App {
         WindowGroup {
 //            ContentView()
             NavigationView {
-                ProfilesView(profiles: .constant(Profile.sampleData))
+                ProfilesView(profiles: .constant(Profile.sampleData), saveAction: {})
             }
         }
     }
