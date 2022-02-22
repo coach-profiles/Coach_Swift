@@ -1,5 +1,5 @@
 //
-//  DetailSessionView.swift
+//  SessionDetailView.swift
 //  Coach
 //
 //  Created by Sudha Ravi Kumar Javvadi on 2/21/22.
@@ -7,8 +7,11 @@
 
 import SwiftUI
 
-struct DetailSessionView: View {
-    var session: Session
+struct SessionDetailView: View {
+    @Binding var session: Session
+    
+    @State private var data = Session.Data()
+    @State private var isPresentingEditView = false
     
     var body: some View {
         List {
@@ -43,12 +46,37 @@ struct DetailSessionView: View {
             }
         }
         .navigationTitle(session.name)
+        .toolbar {
+            Button("Edit") {
+                isPresentingEditView = true
+                data = session.data
+            }
+        }
+        .sheet(isPresented: $isPresentingEditView) {
+            NavigationView {
+                SessionEditView(data: $data)
+                    .navigationTitle(session.name)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Cancel") {
+                                isPresentingEditView = false
+                            }
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Done") {
+                                isPresentingEditView = false
+                                session.update(from: data)
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
 
-struct DetailSessionView_Previews: PreviewProvider {
+struct SessionDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailSessionView(session: Profile.sampleData[0].sessions[0])
-        DetailSessionView(session: Profile.sampleData[0].sessions[1])
+        SessionDetailView(session: .constant(Profile.sampleData[0].sessions[0]))
+        SessionDetailView(session: .constant(Profile.sampleData[0].sessions[1]))
     }
 }

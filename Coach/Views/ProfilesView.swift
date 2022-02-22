@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ProfilesView: View {
-    var profiles: [Profile]
+    @Binding var profiles: [Profile]
     
     var body: some View {
         List {
-            ForEach(profiles) { profile in
-                NavigationLink(destination: SessionsView(profileName: profile.name, sessions: profile.sessions)) {
+            ForEach($profiles) { $profile in
+                NavigationLink(destination: SessionsView(profileName: profile.name, sessions: $profile.sessions, saveAction: {})) {
                     Text(profile.name)
                         .font(.headline)
                         .accessibilityAddTraits(.isHeader)
@@ -27,6 +27,6 @@ struct ProfilesView: View {
 
 struct ProfilesView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilesView(profiles: Profile.sampleData)
+        ProfilesView(profiles: .constant(Profile.sampleData))
     }
 }

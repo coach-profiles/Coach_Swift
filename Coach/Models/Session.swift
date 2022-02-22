@@ -34,4 +34,27 @@ extension Session {
             self.lengthInSeconds = lengthInSeconds
         }
     }
+    
+    struct Data {
+        var name: String = ""
+        var activities: [Activity] = []
+        var theme: Theme = .seafoam
+    }
+    
+    var data: Data {
+        Data(name: name, activities: activities, theme: theme)
+    }
+    
+    mutating func update(from data: Data) {
+        name = data.name
+        activities = data.activities
+        theme = data.theme
+    }
+    
+    init(data: Data) {
+        id = UUID()
+        name = data.name
+        activities = data.activities
+        theme = data.theme
+    }
 }
