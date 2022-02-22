@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Session: Identifiable {
+struct Session: Identifiable, Codable {
     let id: UUID
     var name: String
     var theme: Theme
@@ -23,7 +23,7 @@ struct Session: Identifiable {
 }
 
 extension Session {
-    struct Activity: Identifiable {
+    struct Activity: Identifiable, Codable {
         let id: UUID
         var name: String
         var lengthInSeconds: Int

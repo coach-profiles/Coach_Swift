@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Profile: Identifiable {
+struct Profile: Identifiable, Codable {
     let id: UUID
     var name: String
     var sessions: [Session]
