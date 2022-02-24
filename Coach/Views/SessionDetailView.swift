@@ -13,6 +13,8 @@ struct SessionDetailView: View {
     @State private var data = Session.Data()
     @State private var isPresentingEditView = false
     
+    let saveAction: ()->Void
+    
     var body: some View {
         List {
             Section(header: Text("Session Info")) {
@@ -66,6 +68,7 @@ struct SessionDetailView: View {
                             Button("Done") {
                                 isPresentingEditView = false
                                 session.update(from: data)
+                                saveAction()
                             }
                         }
                     }
@@ -76,7 +79,7 @@ struct SessionDetailView: View {
 
 struct SessionDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SessionDetailView(session: .constant(Profile.sampleData[0].sessions[0]))
-        SessionDetailView(session: .constant(Profile.sampleData[0].sessions[1]))
+        SessionDetailView(session: .constant(Profile.sampleData[0].sessions[0]), saveAction: {})
+        SessionDetailView(session: .constant(Profile.sampleData[0].sessions[1]), saveAction: {})
     }
 }

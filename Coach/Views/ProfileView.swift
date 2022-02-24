@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProfileView: View {
     @Binding var profile: Profile
-    @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewSessionView = false
     @State private var newSessionData = Session.Data()
     let saveAction: ()->Void
@@ -17,7 +16,7 @@ struct ProfileView: View {
     var body: some View {
         List {
             ForEach($profile.sessions) { $session in
-                NavigationLink(destination: SessionDetailView(session: $session)) {
+                NavigationLink(destination: SessionDetailView(session: $session, saveAction: saveAction)) {
                     Text(session.name)
                         .font(.headline)
                         .accessibilityAddTraits(.isHeader)
@@ -47,15 +46,13 @@ struct ProfileView: View {
                             Button("Add") {
                                 let newSession = Session(data: newSessionData)
                                 profile.sessions.append(newSession)
+                                saveAction()
                                 isPresentingNewSessionView = false
                                 newSessionData = Session.Data()
                             }
                         }
                     }
             }
-        }
-        .onChange(of: scenePhase) {phase in
-            if phase == .inactive { saveAction() }
         }
     }
 }

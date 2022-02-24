@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProfilesView: View {
     @Binding var profiles: [Profile]
-    @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewProfileView = false
     @State private var newProfileData = Profile.Data()
     let saveAction: ()->Void
@@ -47,15 +46,13 @@ struct ProfilesView: View {
                             Button("Add") {
                                 let newProfile = Profile(data: newProfileData)
                                 profiles.append(newProfile)
+                                saveAction()
                                 isPresentingNewProfileView = false
                                 newProfileData = Profile.Data()
                             }
                         }
                     }
             }
-        }
-        .onChange(of: scenePhase) {phase in
-            if phase == .inactive { saveAction() }
         }
     }
 }
